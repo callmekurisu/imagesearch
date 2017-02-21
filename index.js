@@ -21,7 +21,7 @@ app.set('port', (process.env.PORT || 5000));
      var results;
      var date = new Date();
      //connect to database
-     mongo.connect('mongodb://localhost:27017/image', function(err, db){
+     mongo.connect('mongodb://<callmekurisu>:<password123>@ds157479.mlab.com:57479/heroku_r7238prm', function(err, db){
   
       results = db.collection('latest').insert({
       searchTerm: 'money', 
@@ -44,7 +44,7 @@ app.set('port', (process.env.PORT || 5000));
 db.close();
 });
      
-mongo.connect('mongodb://localhost:27017/image', function(err, db){
+mongo.connect(''mongodb://<callmekurisu>:<password123>@ds157479.mlab.com:57479/heroku_r7238prm', function(err, db){
   
       results = db.collection('latest').insert({
       searchTerm: 'clock', 
@@ -67,7 +67,7 @@ mongo.connect('mongodb://localhost:27017/image', function(err, db){
 db.close();
 });
 
-mongo.connect('mongodb://localhost:27017/image', function(err, db){
+mongo.connect('mongodb://<callmekurisu>:<password123>@ds157479.mlab.com:57479/heroku_r7238prm', function(err, db){
   
       results = db.collection('latest').insert({
       searchTerm: 'time', 
@@ -94,7 +94,7 @@ db.close();
   var latestSearch = (fs.readFileSync('latest.txt').toString())
   app.get('/api/latest/imagesearch/',function (req, res) {
      var grab;
-    mongo.connect('mongodb://localhost:27017/image', function(err, db){
+    mongo.connect(''mongodb:callmekurisu:password123@ds157479.mlab.com:57479/heroku_r7238prm', function(err, db){
     grab = db.collection('latest').find({ content: 'images'} ).toArray(function(err, doc) //find if a value exists
     {
         if(doc) //if it does
@@ -137,7 +137,7 @@ db.close();
      var results;
      var date = new Date();
      //connect to database
-     mongo.connect('mongodb://localhost:27017/image', function(err, db){
+     mongo.connect(''mongodb:callmekurisu:password123@ds157479.mlab.com:57479/heroku_r7238prm', function(err, db){
   
       results = db.collection('latest').insert({
       searchTerm: search,
