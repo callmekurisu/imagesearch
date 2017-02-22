@@ -16,7 +16,7 @@ app.set('port', (process.env.PORT || 5000));
      res.send(html)
 })
 
-     //??? do I need initialization ???
+     /*??? do I need initialization ???
      var results;
      var date = new Date();
      //connect to database
@@ -88,7 +88,7 @@ mongo.connect('mongodb://callmekurisu:password123@ds157479.mlab.com:57479/heroku
   })
 db.close();
 });
-  
+  */
   var latestSearch = (fs.readFileSync('latest.txt').toString())
   app.get('/api/latest/imagesearch/',function (req, res) {
      var grab;
