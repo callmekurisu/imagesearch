@@ -9,7 +9,7 @@ var Bing = require('node-bing-api')({accKey:"9a21f986757f4411a312afabd71f6f2a" }
 var html = (fs.readFileSync('main.html').toString())
 fs.writeFileSync('api.txt', " ")
 var mongo = require('mongodb').MongoClient
-
+db.createCollection('latest')
 app.set('port', (process.env.PORT || 5000));
 
   app.get('/',function (req, res) {
