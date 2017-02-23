@@ -88,7 +88,6 @@ mongo.connect('mongodb://callmekurisu:password123@ds157479.mlab.com:57479/heroku
 db.close();
 });
   */
-  var latestSearch = (fs.readFileSync('latest.txt').toString())
   app.get('/api/latest/imagesearch/',function (req, res) {
      var grab;
     mongo.connect('mongodb://heroku_r7238prm:8tvj68r6go58dssh7imbgsipot@ds157479.mlab.com:57479/heroku_r7238prm', function(err, db){
@@ -107,7 +106,9 @@ db.close();
     });
     
 }); 
-    res.send('{"what"'+' : '+'"'+doc[doc.length-1]['searchTerm']+'", '+'"when"'+' : '+'"'+doc[doc.length-1]['timestamp']+'"}'+', '+'{"what"'+' : '+'"'+doc[doc.length-2]['searchTerm']+'", '+'"when"'+' : '+'"'+doc[doc.length-2]['timestamp']+'"}'+', '+'{"what"'+'  : '+'"'+doc[doc.length-3]['searchTerm']+'", '+'"when"'+' : '+'"'+doc[doc.length-3]['timestamp']+'"}') 
+	  
+  var latestSearch = (fs.readFileSync('latest.txt').toString())
+    res.send('['+latestSearch+']') 
 })
   
   
