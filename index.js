@@ -15,79 +15,7 @@ app.set('port', (process.env.PORT || 5000));
      res.send(html)
 })
 
-     /*??? do I need initialization ???
-     var results;
-     var date = new Date();
-     //connect to database
-     mongo.connect('mongodb://callmekurisu:password123@ds157479.mlab.com:57479/heroku_r7238prm', function(err, db){
-  
-      results = db.collection('latest').insert({
-      searchTerm: 'money', 
-      timestamp: date ,
-      content: 'images',
-      }, function(err, data){
-      //handle error
-      if (err){
-	console.log('Mad bugs in yo code son!');
-      }
-	else {
-	//stringify output
-	  //console.log(JSON.stringify(data.ops[0]));
-	
-      
-    }
-    //other operations
-    
-  })
-db.close();
-});
      
-mongo.connect('mongodb://callmekurisu:password123@ds157479.mlab.com:57479/heroku_r7238prm', function(err, db){
-  
-      results = db.collection('latest').insert({
-      searchTerm: 'clock', 
-      timestamp: date ,
-      content: 'images',
-      }, function(err, data){
-      //handle error
-      if (err){
-	console.log('Mad bugs in yo code son!');
-      }
-	else {
-	//stringify output
-	  //console.log(JSON.stringify(data.ops[0]));
-	
-      
-    }
-    //other operations
-    
-  })
-db.close();
-});
-
-mongo.connect('mongodb://callmekurisu:password123@ds157479.mlab.com:57479/heroku_r7238prm', function(err, db){
-  
-      results = db.collection('latest').insert({
-      searchTerm: 'time', 
-      timestamp: date ,
-      content: 'images',
-      }, function(err, data){
-      //handle error
-      if (err){
-	console.log('Mad bugs in yo code son!');
-      }
-	else {
-	//stringify output
-	  //console.log(JSON.stringify(data.ops[0]));
-	
-      
-    }
-    //other operations
-    
-  })
-db.close();
-});
-  */
   app.get('/api/latest/imagesearch/',function (req, res) {
      var grab;
     mongo.connect('mongodb://heroku_r7238prm:8tvj68r6go58dssh7imbgsipot@ds157479.mlab.com:57479/heroku_r7238prm', function(err, db){
