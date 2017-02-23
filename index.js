@@ -107,7 +107,7 @@ db.close();
     });
     
 }); 
-    res.send('['+latestSearch+']') 
+    res.send('{"what"'+' : '+'"'+doc[doc.length-1]['searchTerm']+'", '+'"when"'+' : '+'"'+doc[doc.length-1]['timestamp']+'"}'+', '+'{"what"'+' : '+'"'+doc[doc.length-2]['searchTerm']+'", '+'"when"'+' : '+'"'+doc[doc.length-2]['timestamp']+'"}'+', '+'{"what"'+'  : '+'"'+doc[doc.length-3]['searchTerm']+'", '+'"when"'+' : '+'"'+doc[doc.length-3]['timestamp']+'"}') 
 })
   
   
